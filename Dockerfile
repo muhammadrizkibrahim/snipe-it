@@ -10,7 +10,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     echo 'tzdata tzdata/Areas select Etc' | debconf-set-selections; \
     echo 'tzdata tzdata/Zones/Etc select UTC' | debconf-set-selections; \
     apt-get update -qqy \
- && apt-get install -qqy --no-install-recommends \
+ && apt-get install -qqy --no-install-recommends \ 
 apt-utils \
 apache2 \
 apache2-bin \
@@ -44,6 +44,8 @@ php8.3-dev \
 ca-certificates \
 unzip \
 dnsutils \
+pdo_pgsql \
+pgsql \
 && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
